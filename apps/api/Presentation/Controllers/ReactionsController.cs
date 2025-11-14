@@ -26,6 +26,13 @@ public class ReactionsController : ControllerBase
         // For now, use a hardcoded user ID (in production, get from authenticated user)
         var userId = Guid.Parse("11111111-1111-1111-1111-111111111111");
 
+        // Validate that the comment exists
+        var commentExists = await _context.Comments.AnyAsync(c => c.Id == request.CommentId);
+        if (!commentExists)
+        {
+            return NotFound(new { message = "Comment not found" });
+        }
+
         // Check if user already has a reaction on this comment
         var existingReaction = await _context.Reactions
             .FirstOrDefaultAsync(r =>
