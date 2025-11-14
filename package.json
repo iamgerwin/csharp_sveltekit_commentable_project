@@ -1,0 +1,30 @@
+{
+  "name": "csharp-sveltekit-commentable-project",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MonoRepo project with C# .NET 10 backend and SvelteKit frontend for comments CRUD system",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,scss,md,svelte}\"",
+    "api:dev": "cd apps/api && dotnet run",
+    "web:dev": "cd apps/web && npm run dev"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-svelte": "^3.2.8"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "packageManager": "npm@10.9.2"
+}
