@@ -192,12 +192,26 @@ class ApiClient {
 
 			if (error instanceof Error) {
 				if (error.name === 'AbortError') {
-					throw new ApiError(408, 'Request timeout');
+					throw new ApiError(408, 'Request timeout. Please check your connection and try again.');
 				}
+
+				// Detect network errors (no internet connection, DNS failure, etc.)
+				if (
+					error.message === 'Failed to fetch' ||
+					error.name === 'TypeError' ||
+					error.message.includes('NetworkError') ||
+					error.message.includes('network')
+				) {
+					throw new ApiError(
+						0,
+						'Unable to connect to server. Please check your internet connection and try again.'
+					);
+				}
+
 				throw new ApiError(0, error.message);
 			}
 
-			throw new ApiError(0, 'An unexpected error occurred');
+			throw new ApiError(0, 'An unexpected error occurred. Please try again later.');
 		}
 	}
 
