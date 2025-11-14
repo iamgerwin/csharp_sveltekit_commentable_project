@@ -1,0 +1,236 @@
+{
+	"common": {
+		"loading": "Naglo-load...",
+		"error": "Error",
+		"success": "Tagumpay",
+		"cancel": "Kanselahin",
+		"save": "I-save",
+		"delete": "Tanggalin",
+		"edit": "I-edit",
+		"close": "Isara",
+		"submit": "Ipasa",
+		"search": "Maghanap",
+		"filter": "Salain",
+		"previous": "Nakaraan",
+		"next": "Susunod",
+		"page": "Pahina",
+		"of": "ng"
+	},
+	"auth": {
+		"login": "Mag-login",
+		"logout": "Mag-logout",
+		"register": "Magrehistro",
+		"email": "Email",
+		"password": "Password",
+		"username": "Username",
+		"confirmPassword": "Kumpirmahin ang Password",
+		"forgotPassword": "Nakalimutan ang Password?",
+		"rememberMe": "Tandaan Mo Ako",
+		"alreadyHaveAccount": "Mayroon nang account?",
+		"dontHaveAccount": "Walang account?",
+		"loginSuccess": "Matagumpay na nag-login",
+		"logoutSuccess": "Matagumpay na nag-logout",
+		"registerSuccess": "Matagumpay na nagrehistro",
+		"loginError": "Hindi wastong email o password",
+		"registerError": "Nabigo ang pagpaparehistro",
+		"passwordMismatch": "Hindi tugma ang mga password",
+		"emailRequired": "Kailangan ang email",
+		"passwordRequired": "Kailangan ang password",
+		"usernameRequired": "Kailangan ang username"
+	},
+	"dashboard": {
+		"title": "Dashboard",
+		"welcome": "Maligayang pagbabalik, {username}!",
+		"subtitle": "Narito ang nangyayari sa iyong content ngayon.",
+		"stats": {
+			"totalVideos": "Kabuuang Videos",
+			"totalPosts": "Kabuuang Posts",
+			"totalComments": "Kabuuang Komento",
+			"totalReactions": "Kabuuang Reaksyon"
+		},
+		"quickActions": {
+			"title": "Mabilis na Aksyon",
+			"createVideo": "Gumawa ng Video",
+			"createPost": "Gumawa ng Post",
+			"viewVideos": "Tingnan ang Videos",
+			"viewPosts": "Tingnan ang Posts",
+			"uploadVideoDesc": "Mag-upload ng bagong video para ibahagi",
+			"writePostDesc": "Sumulat ng bagong post",
+			"browseVideosDesc": "I-browse ang lahat ng videos",
+			"browsePostsDesc": "I-browse ang lahat ng posts"
+		},
+		"recentActivity": {
+			"title": "Kamakailang Aktibidad",
+			"noActivity": "Walang kamakailang aktibidad. Magsimula sa pag-create ng iyong unang video o post!",
+			"createVideoBtn": "Gumawa ng Video",
+			"createPostBtn": "Gumawa ng Post"
+		},
+		"moderation": {
+			"title": "Moderasyon",
+			"pendingReports": "Naghihintay na Ulat",
+			"flaggedContent": "Na-flag na Content",
+			"viewReports": "Tingnan ang Ulat",
+			"viewFlagged": "Tingnan ang Na-flag"
+		}
+	},
+	"videos": {
+		"title": "Videos",
+		"subtitle": "Mag-browse at magtuklas ng videos",
+		"uploadVideo": "Mag-upload ng Video",
+		"noVideos": "Walang nahanap na videos",
+		"noVideosDesc": "Subukang ayusin ang iyong paghahanap",
+		"beFirst": "Maging una na mag-upload ng video!",
+		"searchPlaceholder": "Maghanap ng videos...",
+		"viewCount": "{count} views",
+		"commentCount": "{count} komento",
+		"duration": "Tagal"
+	},
+	"posts": {
+		"title": "Posts",
+		"subtitle": "Mag-browse at magtuklas ng posts",
+		"createPost": "Gumawa ng Post",
+		"noPosts": "Walang nahanap na posts",
+		"noPostsDesc": "Subukang ayusin ang iyong paghahanap",
+		"beFirst": "Maging una na gumawa ng post!",
+		"searchPlaceholder": "Maghanap ng posts...",
+		"commentCount": "{count} komento"
+	},
+	"comments": {
+		"title": "Komento",
+		"count": "Komento ({count})",
+		"add": "Magdagdag ng Komento",
+		"reply": "Tumugon",
+		"edit": "I-edit",
+		"delete": "Tanggalin",
+		"cancel": "Kanselahin",
+		"save": "I-save",
+		"noComments": "Walang komento pa",
+		"beFirst": "Maging una na mag-komento!",
+		"placeholder": "Sumulat ng komento...",
+		"replyPlaceholder": "Sumulat ng tugon...",
+		"editSuccess": "Na-update ang komento",
+		"deleteSuccess": "Natanggal ang komento",
+		"addSuccess": "Naidagdag ang komento",
+		"loginToComment": "Mangyaring mag-login para mag-komento"
+	},
+	"reactions": {
+		"add": "Magdagdag ng reaksyon",
+		"change": "Baguhin ang reaksyon",
+		"total": "{count} kabuuang reaksyon",
+		"selected": "{type} reaksyon ang napili. {count} kabuuang reaksyon. Pindutin para baguhin ang reaksyon.",
+		"choose": "Pumili ng reaksyon",
+		"types": {
+			"like": "Like",
+			"love": "Love",
+			"laugh": "Tawa",
+			"wow": "Wow",
+			"sad": "Malungkot",
+			"angry": "Galit"
+		},
+		"count": {
+			"like": "{count} tao ang nag-like nito",
+			"love": "{count} tao ang nag-love nito",
+			"laugh": "{count} tao ang tumawa nito",
+			"wow": "{count} tao ang na-wow nito",
+			"sad": "{count} tao ang nalungkot nito",
+			"angry": "{count} tao ang nagalit nito"
+		},
+		"loginRequired": "Mangyaring mag-login para mag-react"
+	},
+	"forms": {
+		"title": "Pamagat",
+		"titlePlaceholder": "Ilagay ang pamagat...",
+		"content": "Nilalaman",
+		"contentPlaceholder": "Ilagay ang nilalaman...",
+		"description": "Deskripsyon",
+		"descriptionPlaceholder": "Ilagay ang deskripsyon...",
+		"videoUrl": "Video URL",
+		"videoUrlPlaceholder": "https://...",
+		"thumbnailUrl": "Thumbnail URL",
+		"thumbnailUrlPlaceholder": "https://...",
+		"duration": "Tagal (segundos)",
+		"required": "Kailangan ang field na ito",
+		"invalidEmail": "Hindi wastong email address",
+		"invalidUrl": "Hindi wastong URL"
+	},
+	"accessibility": {
+		"skipToMain": "Lumaktaw sa pangunahing content",
+		"openMenu": "Buksan ang menu",
+		"closeMenu": "Isara ang menu",
+		"openLanguageMenu": "Buksan ang menu ng wika",
+		"selectLanguage": "Pumili ng wika",
+		"currentLanguage": "Kasalukuyang wika: {language}",
+		"screenReaderOnly": "Para sa screen reader lamang",
+		"loading": "Naglo-load ng content, mangyaring maghintay",
+		"navigationLandmark": "Pangunahing nabigasyon",
+		"mainContentLandmark": "Pangunahing nilalaman",
+		"searchLandmark": "Paghahanap",
+		"complementaryLandmark": "Karagdagang nilalaman"
+	},
+	"gdpr": {
+		"cookieConsent": {
+			"title": "Pahintulot sa Cookie",
+			"message": "Gumagamit kami ng cookies para mapahusay ang iyong karanasan, suriin ang trapiko ng site, at i-personalize ang content. Sa pag-click ng 'Tanggapin Lahat', pumapayag ka sa aming paggamit ng cookies.",
+			"acceptAll": "Tanggapin Lahat",
+			"rejectAll": "Tanggihan Lahat",
+			"customize": "I-customize",
+			"necessary": "Kinakailangang Cookies",
+			"necessaryDesc": "Mahalaga para gumana nang maayos ang website. Hindi maaaring i-disable.",
+			"analytics": "Analytics Cookies",
+			"analyticsDesc": "Tumutulong sa amin na maintindihan kung paano mo ginagamit ang aming website.",
+			"marketing": "Marketing Cookies",
+			"marketingDesc": "Ginagamit para subaybayan ang mga bisita sa mga website para sa advertising.",
+			"preferences": "Preference Cookies",
+			"preferencesDesc": "Naaalala ang iyong mga setting at kagustuhan.",
+			"savePreferences": "I-save ang Kagustuhan",
+			"learnMore": "Matuto pa sa aming",
+			"privacyPolicy": "Patakaran sa Privacy"
+		},
+		"dataExport": {
+			"title": "I-export ang Iyong Data",
+			"description": "I-download ang lahat ng iyong personal na data sa JSON format.",
+			"button": "I-export ang Data",
+			"success": "Matagumpay na na-export ang data",
+			"error": "Nabigo ang pag-export ng data"
+		},
+		"dataDelete": {
+			"title": "Tanggalin ang Iyong Account",
+			"description": "Permanenteng tanggalin ang iyong account at lahat ng kaugnay na data.",
+			"warning": "Hindi na maaaring bawiin ang aksyon na ito. Lahat ng iyong videos, posts, komento, at reaksyon ay permanenteng matatanggal.",
+			"confirm": "I-type ang 'DELETE' para kumpirmahin",
+			"button": "Tanggalin ang Account",
+			"success": "Matagumpay na natanggal ang account",
+			"error": "Nabigo ang pagtanggal ng account"
+		},
+		"privacy": {
+			"title": "Patakaran sa Privacy",
+			"lastUpdated": "Huling na-update: {date}",
+			"dataCollection": "Pagkolekta ng Data",
+			"dataUse": "Paggamit ng Data",
+			"dataSharing": "Pagbabahagi ng Data",
+			"dataRetention": "Pagpapanatili ng Data",
+			"yourRights": "Ang Iyong mga Karapatan",
+			"contact": "Makipag-ugnayan sa Amin"
+		},
+		"terms": {
+			"title": "Mga Tuntunin ng Serbisyo",
+			"lastUpdated": "Huling na-update: {date}",
+			"acceptance": "Pagtanggap ng Mga Tuntunin",
+			"userAccounts": "Mga Account ng User",
+			"contentGuidelines": "Mga Alituntunin sa Content",
+			"intellectualProperty": "Intellectual Property",
+			"liability": "Limitasyon ng Pananagutan",
+			"termination": "Pagtatapos",
+			"changes": "Mga Pagbabago sa Tuntunin",
+			"contact": "Makipag-ugnayan sa Amin"
+		}
+	},
+	"errors": {
+		"generic": "May naganap na error. Mangyaring subukan muli.",
+		"network": "Network error. Mangyaring suriin ang iyong koneksyon.",
+		"unauthorized": "Hindi ka awtorisado na gawin ang aksyon na ito.",
+		"notFound": "Hindi nahanap ang hiniling na resource.",
+		"serverError": "Server error. Mangyaring subukan muli mamaya.",
+		"validationError": "Mangyaring suriin ang iyong input at subukan muli."
+	}
+}
