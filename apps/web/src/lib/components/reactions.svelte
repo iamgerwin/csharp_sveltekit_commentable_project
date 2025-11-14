@@ -35,6 +35,7 @@
 
 	let isSubmitting = $state(false);
 	let showAllReactions = $state(false);
+	let hideTimeout: ReturnType<typeof setTimeout> | null = null;
 
 	const reactions = [
 		{ type: ReactionType.Like, emoji: '👍', label: 'Like' },
@@ -125,6 +126,36 @@
 		}
 	}
 
+	// Helper functions for managing popup visibility with delays
+	function scheduleHide() {
+		// Clear any existing timeout
+		if (hideTimeout) {
+			clearTimeout(hideTimeout);
+		}
+		// Schedule hide after 2 seconds
+		hideTimeout = setTimeout(() => {
+			showAllReactions = false;
+			hideTimeout = null;
+		}, 2000);
+	}
+
+	function cancelHide() {
+		// Cancel scheduled hide
+		if (hideTimeout) {
+			clearTimeout(hideTimeout);
+			hideTimeout = null;
+		}
+	}
+
+	function handleMouseEnter() {
+		cancelHide();
+		showAllReactions = true;
+	}
+
+	function handleMouseLeave() {
+		scheduleHide();
+	}
+
 	// Get top 3 reactions to display
 	const topReactions = $derived(() => {
 		return reactions
@@ -142,11 +173,12 @@
 	<!-- Reaction Button/Display -->
 	<div
 		class="relative"
-		onmouseleave={() => setTimeout(() => (showAllReactions = false), 200)}
+		onmouseenter={handleMouseEnter}
+		onmouseleave={handleMouseLeave}
 	>
 		<button
 			onclick={() => (showAllReactions = !showAllReactions)}
-			onmouseenter={() => (showAllReactions = true)}
+			onmouseenter={handleMouseEnter}
 			onkeydown={(e) => {
 				if (e.key === 'Enter' || e.key === ' ') {
 					e.preventDefault();
@@ -192,6 +224,8 @@
 				role="toolbar"
 				aria-label="Choose a reaction"
 				class="absolute bottom-full left-0 mb-2 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-2 flex gap-1 z-10"
+				onmouseenter={cancelHide}
+				onmouseleave={handleMouseLeave}
 			>
 				{#each reactions as reaction, index}
 					<button
