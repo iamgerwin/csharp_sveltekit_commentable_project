@@ -7,8 +7,8 @@ namespace CommentableAPI.Domain.Enums;
 /// </summary>
 public enum ReportStatus
 {
-    Pending,
-    Reviewed,
-    Resolved,
-    Dismissed
+    Pending = 0,
+    UnderReview = 1,
+    Resolved = 2,
+    Dismissed = 3
 }
