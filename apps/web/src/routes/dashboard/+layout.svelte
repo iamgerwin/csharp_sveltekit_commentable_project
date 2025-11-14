@@ -69,6 +69,7 @@
 							{#each navItems as item}
 								<a
 									href={item.path}
+									data-sveltekit-preload-data="off"
 									class="inline-flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors {isActive(
 										item.path
 									)
@@ -84,6 +85,7 @@
 								{#each moderatorNavItems as item}
 									<a
 										href={item.path}
+										data-sveltekit-preload-data="off"
 										class="inline-flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors {isActive(
 											item.path
 										)
@@ -142,6 +144,7 @@
 						{#each navItems as item}
 							<a
 								href={item.path}
+								data-sveltekit-preload-data="off"
 								class="block px-3 py-2 rounded-md text-base font-medium {isActive(item.path)
 									? 'bg-blue-50 text-blue-700 dark:bg-blue-900 dark:text-blue-200'
 									: 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'}"
@@ -156,6 +159,7 @@
 							{#each moderatorNavItems as item}
 								<a
 									href={item.path}
+									data-sveltekit-preload-data="off"
 									class="block px-3 py-2 rounded-md text-base font-medium {isActive(item.path)
 										? 'bg-blue-50 text-blue-700 dark:bg-blue-900 dark:text-blue-200'
 										: 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'}"
