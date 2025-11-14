@@ -171,16 +171,6 @@
 				</div>
 			{/if}
 
-			<div class="mb-6">
-				<Reactions
-					commentableId={post.id}
-					commentableType={CommentableType.Post}
-					bind:reactionCounts={post.reactionCounts}
-					bind:userReaction={post.userReaction}
-					size="lg"
-				/>
-			</div>
-
 			<div class="prose dark:prose-invert max-w-none">
 				<p class="text-gray-700 dark:text-gray-300 whitespace-pre-wrap text-lg leading-relaxed">
 					{post.content}

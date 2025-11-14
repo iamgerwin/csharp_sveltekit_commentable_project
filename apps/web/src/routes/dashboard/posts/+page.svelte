@@ -5,9 +5,7 @@
 	import Button from '$lib/components/ui/button.svelte';
 	import Card from '$lib/components/ui/card.svelte';
 	import Input from '$lib/components/ui/input.svelte';
-	import Reactions from '$lib/components/reactions.svelte';
 	import type { Post, PostFilters, PaginatedResponse } from '$lib/types/entities.types';
-	import { CommentableType } from '$lib/types/entities.types';
 
 	let posts = $state<Post[]>([]);
 	let isLoading = $state(true);
@@ -139,14 +137,6 @@
 								<span>•</span>
 								<span>💬 {post.commentCount}</span>
 							</div>
-							<Reactions
-								commentableId={post.id}
-								commentableType={CommentableType.Post}
-								reactionCounts={post.reactionCounts}
-								userReaction={post.userReaction}
-								size="sm"
-								showTotal={false}
-							/>
 						</div>
 					</Card>
 				</a>

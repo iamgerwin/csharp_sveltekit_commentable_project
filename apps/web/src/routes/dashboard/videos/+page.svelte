@@ -5,9 +5,7 @@
 	import Button from '$lib/components/ui/button.svelte';
 	import Card from '$lib/components/ui/card.svelte';
 	import Input from '$lib/components/ui/input.svelte';
-	import Reactions from '$lib/components/reactions.svelte';
 	import type { Video, VideoFilters, PaginatedResponse } from '$lib/types/entities.types';
-	import { CommentableType } from '$lib/types/entities.types';
 
 	let videos = $state<Video[]>([]);
 	let isLoading = $state(true);
@@ -175,19 +173,9 @@
 								<span class="flex-shrink-0">{formatDate(video.createdAt)}</span>
 							</div>
 
-							<div class="flex items-center justify-between mt-auto">
-								<div class="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400">
-									<span class="flex items-center gap-1">👁️ {video.viewCount}</span>
-									<span class="flex items-center gap-1">💬 {video.commentCount}</span>
-								</div>
-								<Reactions
-									commentableId={video.id}
-									commentableType={CommentableType.Video}
-									reactionCounts={video.reactionCounts}
-									userReaction={video.userReaction}
-									size="sm"
-									showTotal={false}
-								/>
+							<div class="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 mt-auto">
+								<span class="flex items-center gap-1">👁️ {video.viewCount}</span>
+								<span class="flex items-center gap-1">💬 {video.commentCount}</span>
 							</div>
 						</div>
 					</Card>
