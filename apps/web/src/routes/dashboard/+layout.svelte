@@ -25,6 +25,11 @@
 	}
 
 	function isActive(path: string): boolean {
+		// Exact match for the base dashboard path
+		if (path === '/dashboard') {
+			return $page.url.pathname === '/dashboard';
+		}
+		// For other paths, check exact match or sub-routes
 		return $page.url.pathname === path || $page.url.pathname.startsWith(path + '/');
 	}
 
