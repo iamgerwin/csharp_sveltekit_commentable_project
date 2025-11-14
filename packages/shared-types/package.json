@@ -1,0 +1,19 @@
+{
+  "name": "@commentable/shared-types",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Shared TypeScript types and interfaces",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@commentable/shared-enums": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}

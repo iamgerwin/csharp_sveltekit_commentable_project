@@ -1,0 +1,16 @@
+{
+  "name": "@commentable/shared-constants",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Shared constants for the application",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}
