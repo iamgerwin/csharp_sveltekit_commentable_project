@@ -8,53 +8,53 @@
 export const API_ENDPOINTS = {
   // Auth
   AUTH: {
-    REGISTER: '/api/auth/register',
-    LOGIN: '/api/auth/login',
-    LOGOUT: '/api/auth/logout',
-    REFRESH: '/api/auth/refresh',
-    ME: '/api/auth/me',
+    REGISTER: '/api/v1/auth/register',
+    LOGIN: '/api/v1/auth/login',
+    LOGOUT: '/api/v1/auth/logout',
+    REFRESH: '/api/v1/auth/refresh',
+    ME: '/api/v1/auth/me',
   },
 
   // Users
   USERS: {
-    BASE: '/api/users',
-    BY_ID: (id: string) => `/api/users/${id}`,
-    ME: '/api/users/me',
+    BASE: '/api/v1/users',
+    BY_ID: (id: string) => `/api/v1/users/${id}`,
+    ME: '/api/v1/users/me',
   },
 
   // Videos
   VIDEOS: {
-    BASE: '/api/videos',
-    BY_ID: (id: string) => `/api/videos/${id}`,
-    COMMENTS: (id: string) => `/api/videos/${id}/comments`,
+    BASE: '/api/v1/videos',
+    BY_ID: (id: string) => `/api/v1/videos/${id}`,
+    COMMENTS: (id: string) => `/api/v1/videos/${id}/comments`,
   },
 
   // Posts
   POSTS: {
-    BASE: '/api/posts',
-    BY_ID: (id: string) => `/api/posts/${id}`,
-    COMMENTS: (id: string) => `/api/posts/${id}/comments`,
+    BASE: '/api/v1/posts',
+    BY_ID: (id: string) => `/api/v1/posts/${id}`,
+    COMMENTS: (id: string) => `/api/v1/posts/${id}/comments`,
   },
 
   // Comments
   COMMENTS: {
-    BASE: '/api/comments',
-    BY_ID: (id: string) => `/api/comments/${id}`,
-    REACTIONS: (id: string) => `/api/comments/${id}/reactions`,
-    REPLIES: (id: string) => `/api/comments/${id}/replies`,
+    BASE: '/api/v1/comments',
+    BY_ID: (id: string) => `/api/v1/comments/${id}`,
+    REACTIONS: (id: string) => `/api/v1/comments/${id}/reactions`,
+    REPLIES: (id: string) => `/api/v1/comments/${id}/replies`,
   },
 
   // Reactions
   REACTIONS: {
-    BASE: '/api/reactions',
-    BY_ID: (id: string) => `/api/reactions/${id}`,
-    UPSERT: '/api/reactions/upsert',
+    BASE: '/api/v1/reactions',
+    BY_ID: (id: string) => `/api/v1/reactions/${id}`,
+    UPSERT: '/api/v1/reactions/upsert',
   },
 
   // Reports
   REPORTS: {
-    BASE: '/api/reports',
-    BY_ID: (id: string) => `/api/reports/${id}`,
-    REVIEW: (id: string) => `/api/reports/${id}/review`,
+    BASE: '/api/v1/reports',
+    BY_ID: (id: string) => `/api/v1/reports/${id}`,
+    REVIEW: (id: string) => `/api/v1/reports/${id}/review`,
   },
 } as const;

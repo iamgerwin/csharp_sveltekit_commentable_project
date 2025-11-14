@@ -12,7 +12,7 @@ namespace CommentableAPI.Presentation.Controllers;
 /// Authentication endpoints
 /// </summary>
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/v1/[controller]")]
 [Produces("application/json")]
 public class AuthController : ControllerBase
 {

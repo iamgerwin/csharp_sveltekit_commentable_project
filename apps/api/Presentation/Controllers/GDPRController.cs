@@ -13,7 +13,7 @@ namespace CommentableAPI.Presentation.Controllers;
 /// Implements Data Subject Rights (Articles 15-21)
 /// </summary>
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/v1/[controller]")]
 [Authorize]
 public class GDPRController : ControllerBase
 {

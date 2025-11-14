@@ -8,7 +8,7 @@ using System.Security.Claims;
 namespace CommentableAPI.Presentation.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/v1/[controller]")]
 public class StatsController : ControllerBase
 {
     private readonly ApplicationDbContext _context;
