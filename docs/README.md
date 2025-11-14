@@ -247,6 +247,7 @@ When adding types that need to be shared between frontend and backend:
 - [Entity Relationship Diagram](./erd.md) - Complete database schema with Mermaid diagrams
 - [API Documentation](../apps/api/README.md) - C# .NET API architecture and endpoints
 - [Web Documentation](../apps/web/README.md) - SvelteKit frontend structure
+- [PWA Documentation](./PWA.md) - Progressive Web App features and implementation
 - [Root README](../README.md) - Project overview and quick start
 
 ### Mermaid Diagrams

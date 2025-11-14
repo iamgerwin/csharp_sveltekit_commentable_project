@@ -5,6 +5,7 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import Toast from '$lib/components/ui/toast.svelte';
 	import CookieConsent from '$lib/components/gdpr/CookieConsent.svelte';
+	import PWAManager from '$lib/components/PWAManager.svelte';
 	import '../app.css';
 
 	let { children } = $props();
@@ -69,6 +70,7 @@
 		{@render children()}
 		<Toast />
 		<CookieConsent />
+		<PWAManager />
 	{:else}
 		<div class="flex items-center justify-center min-h-screen">
 			<div class="text-center">

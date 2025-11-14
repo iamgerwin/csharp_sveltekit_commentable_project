@@ -43,6 +43,7 @@ csharp_sveltekit_commentable_project/
 - **Polymorphic Comments System**: Comments can be attached to Videos, Posts, or other entities
 - **User Management**: User authentication and profile management
 - **CRUD Operations**: Full Create, Read, Update, Delete for all entities
+- **Progressive Web App (PWA)**: Installable app with offline support
 
 ### Advanced Features
 - **Reactions System**: Multiple reaction types (Like, Dislike, Love, Clap, etc.)
@@ -50,6 +51,7 @@ csharp_sveltekit_commentable_project/
 - **Pagination**: Efficient pagination to prevent N+1 queries
 - **Caching**: Multi-level caching strategy (Redis, Memory)
 - **Queue System**: Background job processing for heavy operations
+- **PWA Capabilities**: Service worker caching, offline mode, install prompts
 
 ## Getting Started
 
