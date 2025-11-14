@@ -1,4 +1,5 @@
 import { register, init, getLocaleFromNavigator } from 'svelte-i18n';
+import { browser } from '$app/environment';
 
 // Register translation files
 register('en', () => import('./locales/en.json'));
@@ -9,12 +10,11 @@ register('tl', () => import('./locales/tl.json'));
 
 // Initialize i18n
 export function initI18n() {
-	// Check for saved language preference in localStorage first
-	const savedLanguage =
-		typeof localStorage !== 'undefined' ? localStorage.getItem('preferred-language') : null;
+	// Check for saved language preference in localStorage first (only on client)
+	const savedLanguage = browser ? localStorage.getItem('preferred-language') : null;
 
 	init({
 		fallbackLocale: 'en',
-		initialLocale: savedLanguage || getLocaleFromNavigator()
+		initialLocale: savedLanguage || (browser ? getLocaleFromNavigator() : 'en')
 	});
 }
