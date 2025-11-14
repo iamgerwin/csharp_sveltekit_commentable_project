@@ -45,7 +45,7 @@ This is a production-ready MonoRepo implementing a comprehensive comments CRUD s
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd csharp_nextjs_commentable_project
+cd csharp_sveltekit_commentable_project
 
 # Make run script executable
 chmod +x ./run.sh

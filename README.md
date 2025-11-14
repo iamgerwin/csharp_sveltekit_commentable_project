@@ -5,7 +5,7 @@ A production-ready MonoRepo project with C# .NET 9 backend and SvelteKit fronten
 ## Project Architecture
 
 ```
-csharp_nextjs_commentable_project/
+csharp_sveltekit_commentable_project/
 ├── apps/
 │   ├── api/          # C# .NET 9 REST API with Swagger/OpenAPI
 │   └── web/          # SvelteKit 2.48.4 Frontend
