@@ -12,7 +12,11 @@
 			return;
 		}
 
-		registerServiceWorker();
+		// Only register service worker in production
+		// Development uses Vite which conflicts with service worker
+		if (import.meta.env.PROD) {
+			registerServiceWorker();
+		}
 	});
 
 	async function registerServiceWorker() {
