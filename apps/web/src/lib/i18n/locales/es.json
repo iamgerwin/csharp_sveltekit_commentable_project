@@ -1,0 +1,101 @@
+{
+	"common": {
+		"loading": "Cargando...",
+		"error": "Error",
+		"success": "Éxito",
+		"cancel": "Cancelar",
+		"save": "Guardar",
+		"delete": "Eliminar",
+		"edit": "Editar",
+		"close": "Cerrar",
+		"submit": "Enviar",
+		"search": "Buscar",
+		"filter": "Filtrar",
+		"previous": "Anterior",
+		"next": "Siguiente",
+		"page": "Página",
+		"of": "de"
+	},
+	"auth": {
+		"login": "Iniciar sesión",
+		"logout": "Cerrar sesión",
+		"register": "Registrarse",
+		"email": "Correo electrónico",
+		"password": "Contraseña",
+		"username": "Nombre de usuario",
+		"confirmPassword": "Confirmar contraseña",
+		"forgotPassword": "¿Olvidaste tu contraseña?",
+		"rememberMe": "Recuérdame",
+		"alreadyHaveAccount": "¿Ya tienes una cuenta?",
+		"dontHaveAccount": "¿No tienes una cuenta?",
+		"loginSuccess": "Inicio de sesión exitoso",
+		"logoutSuccess": "Sesión cerrada exitosamente",
+		"registerSuccess": "Registro exitoso",
+		"loginError": "Correo o contraseña inválidos",
+		"registerError": "Registro fallido",
+		"passwordMismatch": "Las contraseñas no coinciden",
+		"emailRequired": "El correo es requerido",
+		"passwordRequired": "La contraseña es requerida",
+		"usernameRequired": "El nombre de usuario es requerido"
+	},
+	"dashboard": {
+		"title": "Panel",
+		"welcome": "¡Bienvenido de nuevo, {username}!",
+		"subtitle": "Esto es lo que está pasando con tu contenido hoy.",
+		"stats": {
+			"totalVideos": "Total de Videos",
+			"totalPosts": "Total de Publicaciones",
+			"totalComments": "Total de Comentarios",
+			"totalReactions": "Total de Reacciones"
+		}
+	},
+	"videos": {
+		"title": "Videos",
+		"subtitle": "Explora y descubre videos",
+		"uploadVideo": "Subir Video",
+		"noVideos": "No se encontraron videos",
+		"searchPlaceholder": "Buscar videos..."
+	},
+	"posts": {
+		"title": "Publicaciones",
+		"subtitle": "Explora y descubre publicaciones",
+		"createPost": "Crear Publicación",
+		"noPosts": "No se encontraron publicaciones",
+		"searchPlaceholder": "Buscar publicaciones..."
+	},
+	"comments": {
+		"title": "Comentarios",
+		"count": "Comentarios ({count})",
+		"add": "Agregar Comentario",
+		"placeholder": "Escribe un comentario..."
+	},
+	"reactions": {
+		"add": "Agregar reacción",
+		"change": "Cambiar reacción",
+		"types": {
+			"like": "Me gusta",
+			"love": "Me encanta",
+			"laugh": "Me divierte",
+			"wow": "Impresionante",
+			"sad": "Triste",
+			"angry": "Me enfada"
+		},
+		"loginRequired": "Por favor inicia sesión para reaccionar"
+	},
+	"gdpr": {
+		"cookieConsent": {
+			"title": "Consentimiento de Cookies",
+			"message": "Usamos cookies para mejorar tu experiencia, analizar el tráfico del sitio y personalizar el contenido. Al hacer clic en 'Aceptar Todo', aceptas nuestro uso de cookies.",
+			"acceptAll": "Aceptar Todo",
+			"rejectAll": "Rechazar Todo",
+			"customize": "Personalizar",
+			"privacyPolicy": "Política de Privacidad"
+		}
+	},
+	"errors": {
+		"generic": "Ocurrió un error. Por favor intenta de nuevo.",
+		"network": "Error de red. Por favor verifica tu conexión.",
+		"unauthorized": "No estás autorizado para realizar esta acción.",
+		"notFound": "El recurso solicitado no fue encontrado."
+	}
+}
