@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using CommentableAPI.Domain.Entities;
 using CommentableAPI.Domain.Enums;
 using CommentableAPI.Infrastructure.Data;
@@ -23,8 +24,12 @@ public class ReactionsController : ControllerBase
     [HttpPost("upsert")]
     public async Task<ActionResult<Reaction?>> UpsertReaction([FromBody] UpsertReactionRequest request)
     {
-        // For now, use a hardcoded user ID (in production, get from authenticated user)
-        var userId = Guid.Parse("11111111-1111-1111-1111-111111111111");
+        // Get user ID from JWT claims
+        var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        if (string.IsNullOrEmpty(userIdClaim) || !Guid.TryParse(userIdClaim, out var userId))
+        {
+            return Unauthorized(new { message = "User not authenticated" });
+        }
 
         // Validate that reactions are only for comments
         if (request.CommentableType != CommentableType.Comment)
