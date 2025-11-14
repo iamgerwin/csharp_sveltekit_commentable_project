@@ -26,8 +26,16 @@ public class ReactionsController : ControllerBase
         // For now, use a hardcoded user ID (in production, get from authenticated user)
         var userId = Guid.Parse("11111111-1111-1111-1111-111111111111");
 
+        // Validate that reactions are only for comments
+        if (request.CommentableType != CommentableType.Comment)
+        {
+            return BadRequest(new { message = "Reactions can only be added to comments. Please add a comment first, then react to the comment." });
+        }
+
+        var commentId = request.CommentableId;
+
         // Validate that the comment exists
-        var commentExists = await _context.Comments.AnyAsync(c => c.Id == request.CommentId);
+        var commentExists = await _context.Comments.AnyAsync(c => c.Id == commentId);
         if (!commentExists)
         {
             return NotFound(new { message = "Comment not found" });
@@ -37,7 +45,7 @@ public class ReactionsController : ControllerBase
         var existingReaction = await _context.Reactions
             .FirstOrDefaultAsync(r =>
                 r.UserId == userId &&
-                r.CommentId == request.CommentId);
+                r.CommentId == commentId);
 
         if (existingReaction != null)
         {
@@ -64,7 +72,7 @@ public class ReactionsController : ControllerBase
             {
                 Id = Guid.NewGuid(),
                 UserId = userId,
-                CommentId = request.CommentId,
+                CommentId = commentId,
                 ReactionType = request.ReactionType,
                 CreatedAt = DateTime.UtcNow,
                 UpdatedAt = DateTime.UtcNow
@@ -118,6 +126,7 @@ public class ReactionsController : ControllerBase
 /// </summary>
 public class UpsertReactionRequest
 {
-    public Guid CommentId { get; set; }
+    public Guid CommentableId { get; set; }
+    public CommentableType CommentableType { get; set; }
     public ReactionType ReactionType { get; set; }
 }
