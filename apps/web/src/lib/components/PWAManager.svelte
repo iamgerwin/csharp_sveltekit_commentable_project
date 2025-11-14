@@ -17,7 +17,11 @@
 
 	async function registerServiceWorker() {
 		try {
-			registration = await navigator.serviceWorker.register('/service-worker.js');
+			// In development, service worker is built by SvelteKit
+			// In production, it will be at the root
+			registration = await navigator.serviceWorker.register('/service-worker.js', {
+				type: 'module'
+			});
 
 			console.log('Service Worker registered successfully');
 

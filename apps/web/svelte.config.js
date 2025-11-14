@@ -13,7 +13,8 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter(),
 		serviceWorker: {
-			register: false // We manually register the service worker in PWAManager.svelte
+			register: false, // We manually register the service worker in PWAManager.svelte
+			files: (filepath) => !/\.DS_Store/.test(filepath)
 		}
 	}
 };
