@@ -219,17 +219,6 @@
 					{/if}
 				</div>
 
-				<!-- Reactions -->
-				<div class="mb-4">
-					<Reactions
-						commentableId={video.id}
-						commentableType={CommentableType.Video}
-						bind:reactionCounts={video.reactionCounts}
-						bind:userReaction={video.userReaction}
-						size="lg"
-					/>
-				</div>
-
 				<!-- Description -->
 				<div class="prose dark:prose-invert max-w-none">
 					<p class="text-gray-700 dark:text-gray-300 whitespace-pre-wrap">
